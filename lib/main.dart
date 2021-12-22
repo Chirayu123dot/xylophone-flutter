@@ -57,13 +57,18 @@ class _XylophoneButtonState extends State<XylophoneButton> {
         ),
         style: TextButton.styleFrom(
           backgroundColor: getColor(noteNumber),
-          shape: BeveledRectangleBorder(),
+          shape:
+              BeveledRectangleBorder(), // sets the corner radius of the buttons as 0
         ),
       ),
     );
   }
 }
 
+/// Returns the appropriate color for the corresponding
+/// note number
+/// @param: The noteNumber
+/// @returns the color to be displayed
 Color? getColor(int noteNumber) {
   switch (noteNumber) {
     case 1:
